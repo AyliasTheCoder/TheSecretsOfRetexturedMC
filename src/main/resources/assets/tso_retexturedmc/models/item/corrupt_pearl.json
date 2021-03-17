@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tso_retexturedmc:item/corrupt_pearl"
+  }
+}
