@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tso_retexturedmc:items/infinite_water_bucket"
+  }
+}

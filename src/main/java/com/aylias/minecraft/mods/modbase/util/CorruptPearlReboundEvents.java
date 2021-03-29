@@ -36,7 +36,7 @@ public class CorruptPearlReboundEvents {
         boolean active;
 
         public Rebounder(LivingEntity e) {
-            ticks = 20*15;
+            ticks = 20*15*5;
             entity = e;
             pos = e.getPositionVec();
             x = pos.getX();

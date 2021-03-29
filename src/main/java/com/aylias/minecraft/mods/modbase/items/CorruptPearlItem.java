@@ -25,11 +25,10 @@ public class CorruptPearlItem extends EnderPearlItem {
     public ActionResult<ItemStack> onItemRightClick(World worldIn, PlayerEntity playerIn, Hand handIn) {
         ItemStack itemstack = playerIn.getHeldItem(handIn);
         worldIn.playSound((PlayerEntity)null, playerIn.getPosX(), playerIn.getPosY(), playerIn.getPosZ(), SoundEvents.ENTITY_ENDER_PEARL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
-        playerIn.getCooldownTracker().setCooldown(this, 20);
         if (!worldIn.isRemote) {
             CorruptPearlEntity corruptPearlEntity = new CorruptPearlEntity(worldIn, playerIn);
             corruptPearlEntity.setItem(itemstack);
-            corruptPearlEntity.func_234612_a_(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F, 1.0F);
+            corruptPearlEntity.func_234612_a_(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.5F*2, 3.0F);
             worldIn.addEntity(corruptPearlEntity);
         }
 

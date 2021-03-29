@@ -11,6 +11,6 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 public class RenderRegistry {
 
     public static void registerEntityRenders() {
-        RenderingRegistry.registerEntityRenderingHandler(EntityRegisters.CORRUPT_PEARL, new CorruptPearlRenderer.RenderFactory());
+        // RenderingRegistry.registerEntityRenderingHandler(EntityRegisters.CORRUPT_PEARL, new CorruptPearlRenderer.RenderFactory());
     }
 }

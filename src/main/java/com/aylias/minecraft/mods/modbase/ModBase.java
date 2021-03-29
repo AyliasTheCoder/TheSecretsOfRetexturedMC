@@ -2,6 +2,8 @@ package com.aylias.minecraft.mods.modbase;
 
 import com.aylias.minecraft.mods.modbase.client.renders.RenderRegistry;
 import com.aylias.minecraft.mods.modbase.util.RegistryHandler;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -32,6 +34,10 @@ public class ModBase
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         RenderRegistry.registerEntityRenders();
+
+        RenderType translucent = RenderType.getTranslucent();
+
+        RenderTypeLookup.setRenderLayer(RegistryHandler.BLUE_SLIME_BLOCK.get(), translucent);
     }
 
     public static final ItemGroup TAB = new ItemGroup("TSO RetexturedMC") {
